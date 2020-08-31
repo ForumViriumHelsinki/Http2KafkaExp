@@ -34,5 +34,4 @@ def catchall(path: str):
         return f'Request body too large (>{body_max_size}B)', 400
     producer = fvh_kp.producer
     producer.send(app.config.get('TOPIC_RAW_REQUESTS'), value=data_pack(data))
-    print(data)
     return 'OK'

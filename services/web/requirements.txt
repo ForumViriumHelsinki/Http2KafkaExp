@@ -1,3 +1,4 @@
 Flask==1.1.2
 gunicorn==20.0.4
 git+https://github.com/ForumViriumHelsinki/FVHIoT-python.git#egg=fvhiot
+certifi
