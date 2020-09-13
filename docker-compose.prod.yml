@@ -5,6 +5,7 @@ services:
     build:
       context: ./services/web
       dockerfile: Dockerfile.prod
+    restart: unless-stopped
     command: gunicorn --bind 0.0.0.0:5000 manage:app
     ports:
       - ${FLASK_PORT}:5000
